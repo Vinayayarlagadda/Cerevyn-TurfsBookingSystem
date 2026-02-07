@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turf Booking</title>
+
+  <!-- IMPORTANT: use relative path correctly -->
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>⛱️Welcome to the Turf's World Where Every Match Begins🔥</h1>
+	<div class="auth-buttons">
+	  <button id="loginBtn" onclick="location.href='login.html'">Login</button>
+	  <button id="registerBtn" onclick="location.href='register.html'">Register</button>
+	  <button id="addTurfBtn" onclick="location.href='addTurf.html'">Add Turf</button>
+	  <button id="logoutBtn" onclick="logoutUser()" style="display:none;">Logout</button>
+	</div>
+
+  </header>
+
+  <!-- Turf Cards -->
+  <main>
+    <h2>All Turfs</h2>
+    <div class="turf-cards" id="turfCardsContainer"></div>
+  </main>
+
+  <!-- JS -->
+  <script src="./js/main.js"></script>
+</body>
+</html>
