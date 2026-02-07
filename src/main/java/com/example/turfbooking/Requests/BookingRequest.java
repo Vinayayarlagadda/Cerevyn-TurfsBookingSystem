@@ -4,9 +4,9 @@ public class BookingRequest {
 
     private Long userId;
     private Long turfId;
-    private String date;        // 👈 String
-    private String startTime;   // 👈 String
-    private String endTime;     // 👈 String
+    private String date;        
+    private String startTime;   
+    private String endTime;     
 
     public Long getUserId() { return userId; }
     public void setUserId(Long userId) { this.userId = userId; }
