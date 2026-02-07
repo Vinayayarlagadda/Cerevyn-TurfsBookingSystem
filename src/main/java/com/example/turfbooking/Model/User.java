@@ -17,7 +17,7 @@ public class User {
 
     private String password;
 
-    // ---------- GETTERS & SETTERS ----------
+    
 
     public Long getId() {
         return id;
