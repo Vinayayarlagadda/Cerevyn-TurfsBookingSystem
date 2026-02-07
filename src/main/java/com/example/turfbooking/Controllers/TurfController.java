@@ -28,9 +28,7 @@ public class TurfController {
         this.turfService = turfService;
     }
 
-    // =========================
-    // ADD TURF
-    // =========================
+    
     @PostMapping(consumes = "multipart/form-data")
     public Turf addTurf(
             @RequestParam String name,
@@ -56,25 +54,19 @@ public class TurfController {
         return turfService.addTurf(turf);
     }
 
-    // =========================
-    // GET ALL TURFS
-    // =========================
+    
     @GetMapping
     public List<Turf> getAllTurfs() {
         return turfService.getAllTurfs();
     }
 
-    // =========================
-    // GET AVAILABLE TURFS
-    // =========================
+    
     @GetMapping("/available")
     public List<Turf> getAvailableTurfs() {
         return turfService.getAvailableTurfs();
     }
 
-    // =========================
-    // UPDATE TURF
-    // =========================
+    
     @PutMapping(value = "/{id}", consumes = "multipart/form-data")
     public Turf updateTurf(
             @PathVariable Long id,
@@ -90,7 +82,7 @@ public class TurfController {
         existingTurf.setLocation(location);
         existingTurf.setPricePerHour(pricePerHour);
 
-        // Update image only if new one is sent
+       
         if (image != null && !image.isEmpty()) {
 
             // delete old image
@@ -113,9 +105,7 @@ public class TurfController {
         return turfService.addTurf(existingTurf);
     }
 
-    // =========================
-    // DELETE TURF
-    // =========================
+    
     @DeleteMapping("/{id}")
     public String deleteTurf(@PathVariable Long id) {
 
