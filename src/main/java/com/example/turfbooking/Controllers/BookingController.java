@@ -18,19 +18,19 @@ public class BookingController {
         this.bookingService = bookingService;
     }
 
-    // ✅ CREATE BOOKING
+    
     @PostMapping
     public Booking book(@RequestBody BookingRequest request) {
         return bookingService.bookTurf(request);
     }
 
-    // ✅ GET BOOKINGS BY USER
+    
     @GetMapping("/user/{userId}")
     public List<Booking> getUserBookings(@PathVariable Long userId) {
         return bookingService.getBookingsByUser(userId);
     }
 
-    // ✅ CANCEL BOOKING
+    
     @DeleteMapping("/{bookingId}")
     public String cancel(@PathVariable Long bookingId) {
         bookingService.cancelBooking(bookingId);
