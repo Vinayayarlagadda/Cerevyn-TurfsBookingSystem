@@ -14,7 +14,7 @@ public class RegisterRequest {
         this.name = name;
     }
 
-    public String getEmail() {   // ✅ THIS IS WHAT YOUR SERVICE CALLS
+    public String getEmail() {  
         return email;
     }
 
