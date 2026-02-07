@@ -10,7 +10,7 @@ import com.example.turfbooking.Model.Booking;
 
 public interface BookingRepository extends JpaRepository<Booking, Long> {
 
-    // ✅ For booking availability check
+    
     @Query("SELECT b FROM Booking b WHERE b.turf.id = :turfId AND b.date = :date")
     List<Booking> findBookingsByTurfAndDate(Long turfId, LocalDate date);
 
