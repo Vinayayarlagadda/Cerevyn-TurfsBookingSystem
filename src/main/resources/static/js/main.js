@@ -1,16 +1,12 @@
 const API_BASE_URL = "http://localhost:8090";
 
-/* =========================
-   ON PAGE LOAD
-========================= */
+
 document.addEventListener("DOMContentLoaded", () => {
   handleAuthUI();
   fetchTurfs();
 });
 
-/* =========================
-   AUTH UI HANDLER
-========================= */
+
 function handleAuthUI() {
   const user = localStorage.getItem("loggedInUser");
 
@@ -28,18 +24,14 @@ function handleAuthUI() {
   }
 }
 
-/* =========================
-   LOGOUT
-========================= */
+
 function logoutUser() {
   localStorage.removeItem("loggedInUser");
   alert("Logged out successfully");
   window.location.href = "login.html";
 }
 
-/* =========================
-   REGISTER
-========================= */
+
 function registerUser() {
   const name = document.getElementById("registerName").value;
   const email = document.getElementById("registerEmail").value;
@@ -64,9 +56,7 @@ function registerUser() {
   });
 }
 
-/* =========================
-   LOGIN
-========================= */
+
 function loginUser() {
   const email = document.getElementById("loginEmail").value;
   const password = document.getElementById("loginPassword").value;
@@ -96,9 +86,7 @@ function loginUser() {
   });
 }
 
-/* =========================
-   FETCH TURFS
-========================= */
+
 function fetchTurfs() {
   const container = document.getElementById("turfCardsContainer");
   if (!container) return;
@@ -129,9 +117,7 @@ function renderTurfs(turfs) {
   });
 }
 
-/* =========================
-   BOOK TURF
-========================= */
+
 function handleBookTurf(turfId) {
   const userStr = localStorage.getItem("loggedInUser");
 
