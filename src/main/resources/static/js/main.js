@@ -27,7 +27,7 @@ function handleAuthUI() {
 
 function logoutUser() {
   localStorage.removeItem("loggedInUser");
-  alert("Logged out successfully");
+  alert("Logged out successfully. See you soon!");
   window.location.href = "login.html";
 }
 
@@ -78,7 +78,7 @@ function loginUser() {
       email: data.email
     }));
 
-    alert("✅ Login successful! See you soon..");
+    alert("✅ Login successful!");
     window.location.href = "index.html";
   })
   .catch(err => {
