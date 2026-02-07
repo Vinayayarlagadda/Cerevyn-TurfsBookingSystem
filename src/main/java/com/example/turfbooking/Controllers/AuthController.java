@@ -37,7 +37,7 @@ public class AuthController {
         return new UserResponse(user.getId(), user.getName(), user.getEmail());
     }
 
-    // ✅ Add this endpoint to fetch all registered users
+    
     @GetMapping("/users")
     public List<UserResponse> getAllUsers() {
         List<User> users = userService.getAllUsers();
