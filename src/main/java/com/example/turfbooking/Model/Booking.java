@@ -12,12 +12,12 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // ✅ THIS FIELD IS REQUIRED
+   
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
-    // ✅ THIS FIELD IS REQUIRED
+    
     @ManyToOne
     @JoinColumn(name = "turf_id")
     private Turf turf;
@@ -26,7 +26,7 @@ public class Booking {
     private LocalTime startTime;
     private LocalTime endTime;
 
-    // ===== GETTERS & SETTERS =====
+    
 
     public Long getId() {
         return id;
@@ -36,7 +36,7 @@ public class Booking {
         return user;
     }
 
-    // 🔥 THIS METHOD FIXES YOUR ERROR
+    
     public void setUser(User user) {
         this.user = user;
     }
@@ -72,11 +72,11 @@ public class Booking {
     public void setEndTime(LocalTime endTime) {
         this.endTime = endTime;
     }
-    public String getStatus() {          // ✅ ADD
+    public String getStatus() {          
         return status;
     }
 
-    public void setStatus(String status) { // ✅ ADD
+    public void setStatus(String status) { 
         this.status = status;
     }
 }
