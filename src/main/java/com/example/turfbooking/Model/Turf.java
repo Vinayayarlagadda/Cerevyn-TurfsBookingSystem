@@ -15,9 +15,8 @@ public class Turf {
     private double pricePerHour;
     private String imageUrl; 
     @Column(nullable = false)
-    private boolean available = true; // true = available, false = booked
+    private boolean available = true; 
 
-    // ---------- GETTERS & SETTERS ----------
 
     public Long getId() {
         return id;
